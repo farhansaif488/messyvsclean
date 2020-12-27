@@ -34,6 +34,10 @@ dev_dependencies:
     sdk: flutter
   image_picker: ^0.6.7+4
   tflite: ^1.1.1
+  camera: ^0.5.8+7
+  tflite_flutter_helper: ^0.1.2
+  image: ^2.1.12
+  path_provider: ^1.6.11
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

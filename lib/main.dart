@@ -1,16 +1,26 @@
+import 'package:cleanmessy/wrapper.dart';
 import 'package:flutter/material.dart';
-//import 'package:tflite/tflite.dart';
-import 'home.dart';
+import 'package:tflite/tflite.dart';
+import 'cleanmess.dart';
+import 'package:cleanmessy/objdetect/ui/home_view.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  //const MyApp({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      title: 'Object Detection TFLite',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: Wrapper(),
     );
   }
 }
